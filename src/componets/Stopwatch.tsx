@@ -1,15 +1,12 @@
 import React, { FC, useState } from 'react'
-function formatTime(time: number) {
-   return time < 10 ? `0${time}` : time;
-}
-const Stopwatch: FC = () => {
+import { formatTime } from '../functions/Time';
 
+const Stopwatch: FC = () => {
    const [intervalTime, setIntervalTime] = useState<any>([]);
    const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 })
    const [isActive, setIsActive] = useState(0)
    const [inter, setInter] = useState<any>()
    const [isStart, setIsStart] = useState(false)
-
    const timeFull = `${formatTime(time.h)}:${formatTime(time.m)}:${formatTime(time.s)}:${formatTime(time.ms)}`;
    const Start = () => {
       setIsActive(1)
@@ -35,6 +32,7 @@ const Stopwatch: FC = () => {
    let updatedS: number = time.s;
    let updatedMS: number = time.ms;
    const Clear = () => {
+      setIsStart(false)
       setTime({ ms: 0, s: 0, m: 0, h: 0 })
       setIsActive(0)
       clearInterval(inter)

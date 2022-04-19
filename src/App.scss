@@ -5,6 +5,7 @@
 }
 .App {
   width: 100%;
+
   height: 100vh;
   background-color: rgb(102, 102, 255);
   display: flex;
@@ -13,10 +14,13 @@
   justify-content: center;
   .osnova_stopwatch {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     .stopwatch_container {
+      margin-top: 5px;
+      margin-left: 30px;
       display: inline-block;
       display: flex;
       justify-content: center;
@@ -62,9 +66,9 @@
     .item_stop {
       display: inline-block;
       flex: 1 1 100px;
-background-color: aqua;
-margin-left: 20px;
-     
+      background-color: rgb(255, 255, 255);
+      margin-left: 20px;
+
       h1 {
         text-align: center;
       }
@@ -104,7 +108,7 @@ margin-left: 20px;
       }
     }
     height: 300px;
-    
+
     position: relative;
     .main_title {
       position: absolute;
@@ -114,6 +118,57 @@ margin-left: 20px;
       text-align: center;
       color: white;
       font-size: 40px;
+    }
+  }
+}
+
+.div_buttons {
+  .btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-size: 25px;
+    &:hover {
+      background: rgb(128, 0, 4);
+    }
+  }
+}
+.timer {
+  width: 400px;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  .timer_main {
+    width: 100%;
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    .cirsycle {
+      width: 190px;
+      height: 190px;
+      background-color: rgb(39, 201, 201);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .timer_input{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        input{
+     text-align: center;
+          font-size: 20px;
+          height: 30px;
+          width:40px;
+        }
+      }
     }
   }
 }
