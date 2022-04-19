@@ -132,9 +132,19 @@
 .timer {
   width: 400px;
   height: 300px;
-  background-color: red;
   display: flex;
   flex-direction: column;
+}
+.timer .btns_timer button {
+  padding: 10px 20px;
+  display: table;
+  margin: 30px auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  font-size: 25px;
 }
 .timer .timer_main {
   width: 100%;
@@ -142,11 +152,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
 }
 .timer .timer_main .cirsycle {
   width: 190px;
   height: 190px;
+  color: white;
   background-color: rgb(39, 201, 201);
   border-radius: 50%;
   display: flex;
